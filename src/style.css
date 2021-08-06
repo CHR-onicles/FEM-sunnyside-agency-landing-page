@@ -24,6 +24,8 @@ GLOBAL VARIABLES
     --clr-dark-grayish-blue: hsl(232, 10%, 55%);
     --clr-grayish-blue: hsl(210, 4%, 67%);
     --clr-white: hsl(0, 0%, 100%);
+
+    --transition: all .3s;
 }
 *,
 *::before,
@@ -32,8 +34,85 @@ GLOBAL VARIABLES
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--ff-size);
+}
+.main-header {
+    min-height: 100vh;
+    background: url("./images/mobile/image-header.jpg") center / cover no-repeat;
+}
+/*================
+NAVBAR
+/*===============*/
+.navbar {
+    background: transparent;
+    padding: 1.5rem 1rem;
+}
+.navbar-content {
+
+}
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-toggle{
+    background: none;
+    border: none;
+    transition: var(--transition);
+}
+.rotate-nav-toggle{
+    transform: rotate(90deg);
+}
+.nav-links-container{
+    height: 0;
+    opacity: 0;
+    /* overflow: hidden; */
+    transition: var(--transition);
+    background: var(--clr-white);
+    margin-top: 2.5rem;
+    position: relative;
+    transform: translateY(-50px);
+}
+.nav-links-container::before{
+    content: "";
+    position: absolute;
+    top: -6%;
+    right: 0;
+    width: 0;
+    border: 10px solid;
+    border-color: transparent white white transparent;
+}
+.nav-links li {
+    text-align: center;
+    list-style-type: none;
+    margin: 1.5em 0;
+}
+.nav-links li:first-child{
+    padding-top: 2em;
+}
+.nav-links li:last-child{
+    /* adding values from all links in addition to its padding */
+    margin-top: 2.5em;
+    padding-bottom: 3em;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: var(--clr-dark-grayish-blue);
+    font-size: 17px;
+}
+li a.contact{
+    background: var(--clr-yellow);
+    color: var(--clr-v-dark-desat-blue);
+    font-family: var(--ff-secondary);
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 1em 1.5em;
+    border-radius: 40px;
 }
 .attribution {
     font-size: 11px;
