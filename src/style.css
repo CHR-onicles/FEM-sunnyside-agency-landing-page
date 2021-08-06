@@ -79,6 +79,7 @@ NAVBAR
     left: 0;
     height: 0;
     width: 100%;
+    visibility: hidden;
     opacity: 0;
     transition: var(--transition);
     background: var(--clr-white);
@@ -134,7 +135,8 @@ END NAVBAR
 }
 .banner h1 {
     color: var(--clr-white);
-    letter-spacing: 3px;
+    font-size: clamp(2rem, 2rem + 2vw, 3rem);
+    letter-spacing: 5px;
     text-transform: uppercase;
 }
 .banner img {
@@ -147,6 +149,7 @@ section.services img {
     object-fit: cover;
 }
 section.about h2 {
+    font-size: clamp(1.5rem, 1.6rem + 1vw, 2rem);
     font-weight: 900;
     width: 80%;
     color: var(--clr-v-dark-desat-blue);
@@ -184,6 +187,9 @@ section.about span::before {
     background: hsla(51, 95%, 70%, 0.5);
     z-index: -1;
 }
+section.about span:hover {
+    cursor: pointer;
+}
 section.services article {
     position: relative;
     margin-bottom: -2%; /* to cover tiny whitespace */
@@ -196,8 +202,10 @@ section.services .text-content {
     text-align: center;
 }
 section.services .text-content h3 {
+    font-size: clamp(1.5rem, 1.5rem + 1vw, 1.8rem);
     font-weight: 900;
     margin-bottom: 1.2rem;
+    text-transform: capitalize;
 }
 section.services .text-content :is(.graphic, .graphic + p) {
     color: var(--clr-dark-desat-cyan);
@@ -206,7 +214,7 @@ section.services .text-content :is(.photography, .photography + p) {
     color: var(--clr-dark-blue);
 }
 section.services .text-content p {
-    font-size: 14px;
+    font-size: clamp(14px, 14px + .5vw, 17px);
     line-height: 1.5em;
 }
 section.testimonials {
@@ -218,7 +226,7 @@ section.testimonials article {
 section.testimonials h3 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: clamp(.9rem, .9+1vw, 1.2rem);
     letter-spacing: 3px;
     color: var(--clr-dark-grayish-blue);
     font-weight: 900;
@@ -273,6 +281,7 @@ footer{
     display: block;
     margin: 0 auto;
     width: 55%;
+    max-width: 250px;
 }
 .footer-nav ul{
     list-style-type: none;
