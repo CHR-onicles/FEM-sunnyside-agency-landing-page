@@ -136,6 +136,52 @@ END NAVBAR
 .banner img {
     align-self: start;
 }
+section.about{
+
+}
+section.about img {
+    width: 100%;
+    object-fit: cover;
+}
+section.about h2 {
+    font-family: var(--ff-secondary);
+    font-weight: 900;
+    width: 80%;
+    color: var(--clr-v-dark-desat-blue);
+    margin: 2rem auto 1rem;
+    text-align: center;
+}
+section.about p {
+    font-size: 15px;
+    color: var(--clr-dark-grayish-blue);
+    font-weight: 600;
+    text-align: center;
+    width: 85%;
+    margin: 1rem auto 2rem;
+}
+section.about span {
+    display: block;
+    font-family: var(--ff-secondary);
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--clr-v-dark-desat-blue);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem 0 3.5rem;
+    position: relative;
+}
+section.about span::before {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 11ch;
+    height: 1ch;
+    border-radius: 4px;
+    background:hsla(51, 95%, 70%, .5);
+    z-index: -1;
+}
 .attribution {
     font-size: 11px;
     text-align: center;
