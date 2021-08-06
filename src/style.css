@@ -1,0 +1,44 @@
+/*================
+FONTS
+/*===============*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+/*================
+GLOBAL VARIABLES
+/*===============*/
+:root {
+    --ff-primary: "Barlow", sans-serif;
+    --ff-secondary: "Fraunces", serif;
+    --ff-size: 18px;
+
+    /* primary */
+    --clr-soft-red: hsl(7, 99%, 70%);
+    --clr-yellow: hsl(51, 100%, 49%);
+    --clr-dark-desat-cyan: hsl(167, 40%, 24%); /* graphic design text */
+    --clr-dark-blue: hsl(198, 62%, 26%); /* photography text */
+    --clr-dark-moderate-cyan: hsl(168, 34%, 41%); /* footer */
+
+    /* neutral */
+    --clr-v-dark-desat-blue: hsl(212, 27%, 19%);
+    --clr-v-dark-grayish-blue: hsl(213, 9%, 39%);
+    --clr-dark-grayish-blue: hsl(232, 10%, 55%);
+    --clr-grayish-blue: hsl(210, 4%, 67%);
+    --clr-white: hsl(0, 0%, 100%);
+}
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
