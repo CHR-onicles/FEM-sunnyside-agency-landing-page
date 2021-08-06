@@ -52,9 +52,6 @@ NAVBAR
     background: transparent;
     padding: 1.5rem 1rem;
 }
-.navbar-content {
-
-}
 .nav-header {
     display: flex;
     align-items: center;
@@ -68,14 +65,19 @@ NAVBAR
 .rotate-nav-toggle{
     transform: rotate(90deg);
 }
+.navbar-content {
+    position: relative;
+}
 .nav-links-container{
+    position: absolute;
+    top: 100%;
+    left: 0;
     height: 0;
+    width: 100%;
     opacity: 0;
-    /* overflow: hidden; */
     transition: var(--transition);
     background: var(--clr-white);
     margin-top: 2.5rem;
-    position: relative;
     transform: translateY(-50px);
 }
 .nav-links-container::before{
@@ -93,12 +95,14 @@ NAVBAR
     margin: 1.5em 0;
 }
 .nav-links li:first-child{
+    margin-top: 0;
     padding-top: 2em;
 }
 .nav-links li:last-child{
     /* adding values from all links in addition to its padding */
     margin-top: 2.5em;
     padding-bottom: 3em;
+    margin-bottom: 0;
 }
 .nav-links li a{
     text-decoration: none;
@@ -113,6 +117,24 @@ li a.contact{
     text-transform: uppercase;
     padding: 1em 1.5em;
     border-radius: 40px;
+}
+/*================
+END NAVBAR
+/*===============*/
+.banner{
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.banner h1 {
+    font-family: var(--ff-secondary);
+    color: var(--clr-white);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.banner img {
+    align-self: start;
 }
 .attribution {
     font-size: 11px;
