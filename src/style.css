@@ -25,7 +25,7 @@ GLOBAL VARIABLES
     --clr-grayish-blue: hsl(210, 4%, 67%);
     --clr-white: hsl(0, 0%, 100%);
 
-    --transition: all .3s;
+    --transition: all 0.3s;
 }
 *,
 *::before,
@@ -57,18 +57,18 @@ NAVBAR
     align-items: center;
     justify-content: space-between;
 }
-.nav-toggle{
+.nav-toggle {
     background: none;
     border: none;
     transition: var(--transition);
 }
-.rotate-nav-toggle{
+.rotate-nav-toggle {
     transform: rotate(90deg);
 }
 .navbar-content {
     position: relative;
 }
-.nav-links-container{
+.nav-links-container {
     position: absolute;
     top: 100%;
     left: 0;
@@ -80,7 +80,7 @@ NAVBAR
     margin-top: 2.5rem;
     transform: translateY(-50px);
 }
-.nav-links-container::before{
+.nav-links-container::before {
     content: "";
     position: absolute;
     top: -6%;
@@ -94,22 +94,22 @@ NAVBAR
     list-style-type: none;
     margin: 1.5em 0;
 }
-.nav-links li:first-child{
+.nav-links li:first-child {
     margin-top: 0;
     padding-top: 2em;
 }
-.nav-links li:last-child{
+.nav-links li:last-child {
     /* adding values from all links in addition to its padding */
     margin-top: 2.5em;
     padding-bottom: 3em;
     margin-bottom: 0;
 }
-.nav-links li a{
+.nav-links li a {
     text-decoration: none;
     color: var(--clr-dark-grayish-blue);
     font-size: 17px;
 }
-li a.contact{
+li a.contact {
     background: var(--clr-yellow);
     color: var(--clr-v-dark-desat-blue);
     font-family: var(--ff-secondary);
@@ -121,7 +121,7 @@ li a.contact{
 /*================
 END NAVBAR
 /*===============*/
-.banner{
+.banner {
     min-height: 80vh;
     display: grid;
     place-items: center;
@@ -136,11 +136,10 @@ END NAVBAR
 .banner img {
     align-self: start;
 }
-section.about{
-
-}
-section.about img {
+section.about img,
+section.services img {
     width: 100%;
+    height: auto;
     object-fit: cover;
 }
 section.about h2 {
@@ -179,8 +178,34 @@ section.about span::before {
     width: 11ch;
     height: 1ch;
     border-radius: 4px;
-    background:hsla(51, 95%, 70%, .5);
+    background: hsla(51, 95%, 70%, 0.5);
     z-index: -1;
+}
+section.services article { /*TODO: let article shrink to fit image, or image expand to fill article */
+    position: relative;
+    margin-bottom: -2%; /* to cover tiny whitespace */
+}
+section.services .text-content {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+}
+section.services .text-content h3 {
+    font-family: var(--ff-secondary);
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+}
+.text-content :is(.photography, .photography + p) {
+    color: var(--clr-dark-blue);
+}
+.text-content :is(.graphic, .graphic + p) {
+    color: var(--clr-dark-desat-cyan);
+}
+.text-content p {
+    font-size: 14px;
+    line-height: 1.5em;
 }
 .attribution {
     font-size: 11px;
