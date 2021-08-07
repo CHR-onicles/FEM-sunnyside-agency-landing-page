@@ -39,7 +39,8 @@ html {
 }
 body {
     font-family: var(--ff-primary);
-    font-size: var(--ff-size);
+    font-size: (var(--ff-size), var(--ff-size) + 1vw, var(--ff-size) + 4px);
+
 }
 h1,
 h2,
@@ -113,13 +114,13 @@ NAVBAR
 .nav-links li a {
     text-decoration: none;
     color: var(--clr-dark-grayish-blue);
-    font-size: 17px;
+    font-size: clamp(17px, 17px + .5vw, 20px);
 }
 li a.contact {
     background: var(--clr-yellow);
     color: var(--clr-v-dark-desat-blue);
     font-family: var(--ff-secondary);
-    font-size: 15px;
+    font-size: clamp(15px, 15px + .5vw, 18.5px);
     text-transform: uppercase;
     padding: 1em 1.5em;
     border-radius: 40px;
@@ -157,7 +158,7 @@ section.about h2 {
     text-align: center;
 }
 section.about p {
-    font-size: 15px;
+    font-size: clamp(15px, 15px + .5vw, 17px);
     color: var(--clr-dark-grayish-blue);
     font-weight: 600;
     text-align: center;
@@ -167,7 +168,7 @@ section.about p {
 section.about span {
     display: block;
     font-family: var(--ff-secondary);
-    font-size: 14px;
+    font-size: clamp(14px, 14 + .5vw, 17px);
     font-weight: 900;
     color: var(--clr-v-dark-desat-blue);
     text-align: center;
@@ -226,7 +227,7 @@ section.testimonials article {
 section.testimonials h3 {
     text-align: center;
     text-transform: uppercase;
-    font-size: clamp(.9rem, .9+1vw, 1.2rem);
+    font-size: clamp(19px, 19px + 1vw, 22px);
     letter-spacing: 3px;
     color: var(--clr-dark-grayish-blue);
     font-weight: 900;
@@ -255,7 +256,7 @@ section.testimonials .name {
 section.testimonials .role {
     display: block;
     text-align: center;
-    font-size: 14px;
+    font-size: clamp(14px, 14px + .5vw, 16px);
     margin-top: 1rem;
     color: var(--clr-grayish-blue);
 }
@@ -309,9 +310,19 @@ footer{
 }
 .attribution {
     margin-top: 2rem;
-    font-size: 12px;
+    font-size: clamp(12px, 12px + 1vw, 15px);
     text-align: center;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+@media screen and (min-width: 768px) {
+    section.services img {
+        height: 110vw;
+        object-fit: cover;
+        object-position: center 10%;
+    }
+}
+@media screen and (min-width: 992px) {
+    
 }
