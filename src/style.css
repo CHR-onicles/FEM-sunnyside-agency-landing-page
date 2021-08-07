@@ -193,7 +193,10 @@ section.about span:hover {
 }
 section.services article {
     position: relative;
-    margin-bottom: -2%; /* to cover tiny whitespace */
+    margin-bottom: -2%; /* to cover tiny whitespace in between articles */
+}
+section.services img {
+    max-height: 115vh;
 }
 section.services .text-content {
     position: absolute;
@@ -247,6 +250,7 @@ section.testimonials p {
 }
 section.testimonials .name {
     font-family: var(--ff-secondary);
+    font-size: clamp(15px, 15px + .5vw, 18px);
     font-weight: 900;
     color: var(--clr-v-dark-desat-blue);
     display: block;
@@ -256,7 +260,7 @@ section.testimonials .name {
 section.testimonials .role {
     display: block;
     text-align: center;
-    font-size: clamp(14px, 14px + .5vw, 16px);
+    font-size: clamp(14px, 14px + .3vw, 16px);
     margin-top: 1rem;
     color: var(--clr-grayish-blue);
 }
@@ -318,9 +322,9 @@ footer{
 }
 @media screen and (min-width: 768px) {
     section.services img {
-        height: 110vw;
+        /* height: 110vw; */
         object-fit: cover;
-        object-position: center 10%;
+        object-position: center 20%;
     }
 }
 @media screen and (min-width: 992px) {
