@@ -26,6 +26,7 @@ GLOBAL VARIABLES
     --clr-white: hsl(0, 0%, 100%);
 
     --transition: all 0.3s;
+    --max-width: 1440px;
 }
 *,
 *::before,
@@ -114,13 +115,13 @@ NAVBAR
 .nav-links li a {
     text-decoration: none;
     color: var(--clr-dark-grayish-blue);
-    font-size: clamp(17px, 17px + .5vw, 20px);
+    font-size: clamp(17px, 17px + .5vw, 18.5px);
 }
 li a.contact {
     background: var(--clr-yellow);
     color: var(--clr-v-dark-desat-blue);
     font-family: var(--ff-secondary);
-    font-size: clamp(15px, 15px + .5vw, 18.5px);
+    font-size: clamp(15px, 15px + .5vw, 17.5px);
     text-transform: uppercase;
     padding: 1em 1.5em;
     border-radius: 40px;
@@ -143,11 +144,20 @@ END NAVBAR
 .banner img {
     align-self: start;
 }
-section.about img,
 section.services img {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+section.about :is(.img-transform, .img-standout){
+    height: min(80vw, 450px);
+    width: 100%;
+}
+section.about .img-transform{
+    background: url("./images/mobile/image-transform.jpg") center /cover no-repeat;
+}
+section.about .img-standout{
+    background: url("./images/mobile/image-stand-out.jpg") center /cover no-repeat;
 }
 section.about h2 {
     font-size: clamp(1.5rem, 1.6rem + 1vw, 2rem);
@@ -196,7 +206,8 @@ section.services article {
     margin-bottom: -2%; /* to cover tiny whitespace in between articles */
 }
 section.services img {
-    max-height: 115vh;
+    max-height: 115vmax; 
+    /* more adjustments can be made here to position image better on increasing screen size */
 }
 section.services .text-content {
     position: absolute;
@@ -322,11 +333,59 @@ footer{
 }
 @media screen and (min-width: 768px) {
     section.services img {
-        /* height: 110vw; */
-        object-fit: cover;
         object-position: center 20%;
     }
 }
-@media screen and (min-width: 992px) {
-    
+@media screen and (min-width: 800px) {
+    .main-header {
+        background: url("./images/desktop/image-header.jpg") center /cover no-repeat;
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .navbar-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    .nav-links-container{
+        /* using !important to override JS styles */
+        display: flex !important;
+        position: static !important;
+        height: auto !important;
+        width: auto;
+        opacity: 1 !important;
+        visibility: visible !important;
+        background: transparent;
+        transform: none !important;
+        margin: 0;
+    }
+    .nav-links{
+        display: inline;
+        width: 100%;
+    }
+    .nav-links li {
+        display: inline;
+    }
+    .nav-links li a {
+        color: var(--clr-white);
+        margin: 0 1rem;
+    }
+    li a.contact{
+        color: var(--clr-v-dark-desat-blue);
+        background: var(--clr-white);
+        padding: .7em 1.2em;
+    }
+    .nav-links-container::before{
+        display: none;
+    }
+    section.about{
+    }
+    section.about article{
+        display: flex;
+        max-width: 100%;
+    }
 }
