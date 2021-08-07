@@ -41,7 +41,6 @@ html {
 body {
     font-family: var(--ff-primary);
     font-size: (var(--ff-size), var(--ff-size) + 1vw, var(--ff-size) + 4px);
-
 }
 h1,
 h2,
@@ -115,13 +114,13 @@ NAVBAR
 .nav-links li a {
     text-decoration: none;
     color: var(--clr-dark-grayish-blue);
-    font-size: clamp(17px, 17px + .5vw, 18.5px);
+    font-size: clamp(17px, 17px + 0.5vw, 18.5px);
 }
 li a.contact {
     background: var(--clr-yellow);
     color: var(--clr-v-dark-desat-blue);
     font-family: var(--ff-secondary);
-    font-size: clamp(15px, 15px + .5vw, 17.5px);
+    font-size: clamp(15px, 15px + 0.5vw, 17.5px);
     text-transform: uppercase;
     padding: 1em 1.5em;
     border-radius: 40px;
@@ -144,20 +143,15 @@ END NAVBAR
 .banner img {
     align-self: start;
 }
-section.services img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-section.about :is(.img-transform, .img-standout){
+section.about :is(.img-transform, .img-standout) {
     height: min(80vw, 450px);
     width: 100%;
 }
-section.about .img-transform{
-    background: url("./images/mobile/image-transform.jpg") center /cover no-repeat;
+section.about .img-transform {
+    background: url("./images/mobile/image-transform.jpg") center / cover no-repeat;
 }
-section.about .img-standout{
-    background: url("./images/mobile/image-stand-out.jpg") center /cover no-repeat;
+section.about .img-standout {
+    background: url("./images/mobile/image-stand-out.jpg") center / cover no-repeat;
 }
 section.about h2 {
     font-size: clamp(1.5rem, 1.6rem + 1vw, 2rem);
@@ -168,7 +162,7 @@ section.about h2 {
     text-align: center;
 }
 section.about p {
-    font-size: clamp(15px, 15px + .5vw, 17px);
+    font-size: clamp(15px, 15px + 0.5vw, 17px);
     color: var(--clr-dark-grayish-blue);
     font-weight: 600;
     text-align: center;
@@ -178,7 +172,7 @@ section.about p {
 section.about span {
     display: block;
     font-family: var(--ff-secondary);
-    font-size: clamp(14px, 14 + .5vw, 17px);
+    font-size: clamp(14px, 14 + 0.5vw, 17px);
     font-weight: 900;
     color: var(--clr-v-dark-desat-blue);
     text-align: center;
@@ -203,11 +197,19 @@ section.about span:hover {
 }
 section.services article {
     position: relative;
-    margin-bottom: -2%; /* to cover tiny whitespace in between articles */
+    margin-bottom: -10.5%; /* to cover tiny whitespace in between articles */
 }
-section.services img {
-    max-height: 115vmax; 
-    /* more adjustments can be made here to position image better on increasing screen size */
+section.services :is(.img-graphic-design, .img-photography){
+    height: min(80vw + 380px, 600px);
+    width: 100%;
+}
+section.services .img-graphic-design{
+    background: url("./images/mobile/image-graphic-design.jpg") center /cover no-repeat;
+    background-position: center calc(40% + 10vw);
+}
+section.services .img-photography{
+    background: url("./images/mobile/image-photography.jpg") center /cover no-repeat;
+    background-position: center calc(40% + 10vw);
 }
 section.services .text-content {
     position: absolute;
@@ -229,7 +231,7 @@ section.services .text-content :is(.photography, .photography + p) {
     color: var(--clr-dark-blue);
 }
 section.services .text-content p {
-    font-size: clamp(14px, 14px + .5vw, 17px);
+    font-size: clamp(14px, 14px + 0.5vw, 17px);
     line-height: 1.5em;
 }
 section.testimonials {
@@ -261,7 +263,7 @@ section.testimonials p {
 }
 section.testimonials .name {
     font-family: var(--ff-secondary);
-    font-size: clamp(15px, 15px + .5vw, 18px);
+    font-size: clamp(15px, 15px + 0.5vw, 18px);
     font-weight: 900;
     color: var(--clr-v-dark-desat-blue);
     display: block;
@@ -271,56 +273,59 @@ section.testimonials .name {
 section.testimonials .role {
     display: block;
     text-align: center;
-    font-size: clamp(14px, 14px + .3vw, 16px);
+    font-size: clamp(14px, 14px + 0.3vw, 16px);
     margin-top: 1rem;
     color: var(--clr-grayish-blue);
 }
-section.gallery{
+section.gallery .mobile-container {
     margin-top: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
-section.gallery img {
+section.gallery .desktop-container {
+    display: none;
+}
+section.gallery .mobile-container img {
     object-fit: cover;
     width: 100%;
 }
-footer{
+footer {
     min-height: 40vh;
     background: hsl(167, 44%, 70%); /* actual footer color from design */
 }
-.logo-wrapper{
+.logo-wrapper {
     padding-top: 3rem;
     width: 100%;
 }
-.logo-wrapper .footer-logo{
+.logo-wrapper .footer-logo {
     display: block;
     margin: 0 auto;
-    width: 55%;
+    width: 50%;
     max-width: 250px;
 }
-.footer-nav ul{
+.footer-nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     margin-top: 2rem;
 }
-.footer-nav a{
+.footer-nav a {
     text-decoration: none;
     color: var(--clr-dark-desat-cyan);
 }
-.social-media-container{
+.social-media-container {
     display: flex;
     justify-content: space-evenly;
     margin-top: 3rem;
 }
-.social-media-container img{
+.social-media-container img {
     margin: 0 1rem 0 1rem;
 }
-.social-media-container img:first-child{
+.social-media-container img:first-child {
     margin-left: auto;
 }
-.social-media-container img:last-child{
+.social-media-container img:last-child {
     margin-right: auto;
 }
 .attribution {
@@ -333,17 +338,18 @@ footer{
 }
 @media screen and (min-width: 768px) {
     section.services img {
+        max-height: 100vh;
         object-position: center 20%;
     }
 }
 @media screen and (min-width: 800px) {
     .main-header {
-        background: url("./images/desktop/image-header.jpg") center /cover no-repeat;
+        background: url("./images/desktop/image-header.jpg") center / cover no-repeat;
     }
-    .nav-toggle{
+    .nav-toggle {
         display: none;
     }
-    .navbar-content{
+    .navbar-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -351,7 +357,7 @@ footer{
         max-width: 1400px;
         margin: 0 auto;
     }
-    .nav-links-container{
+    .nav-links-container {
         /* using !important to override JS styles */
         display: flex !important;
         position: static !important;
@@ -363,7 +369,7 @@ footer{
         transform: none !important;
         margin: 0;
     }
-    .nav-links{
+    .nav-links {
         display: inline;
         width: 100%;
     }
@@ -374,18 +380,42 @@ footer{
         color: var(--clr-white);
         margin: 0 1rem;
     }
-    li a.contact{
+    li a.contact {
         color: var(--clr-v-dark-desat-blue);
         background: var(--clr-white);
-        padding: .7em 1.2em;
+        padding: 0.7em 1.2em;
     }
-    .nav-links-container::before{
+    .nav-links-container::before {
         display: none;
     }
-    section.about{
-    }
-    section.about article{
+    section.about article {
         display: flex;
         max-width: 100%;
+    }
+    section.about :is(.img-transform, .img-standout, .text-content) {
+        width: 50vw;
+    }
+    section.about .text-content {
+        display: grid;
+        place-content: center;
+    }
+    section.about .text-content :is(h2, p){
+        text-align: left;
+        margin-left: 10vw;
+        width: 70%;
+    }
+    section.about .text-content h2{
+        margin-top: 0;
+    }
+    section.about .text-content span {
+        text-align: left;
+        margin: 0 0 0 10vw;
+    }
+    section.about .text-content span::before{
+        left: -1%;
+        transform: none;
+    }
+    .img-transform {
+        order: 1;
     }
 }
