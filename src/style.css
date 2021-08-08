@@ -323,13 +323,21 @@ footer {
     justify-content: space-evenly;
     margin-top: 3rem;
 }
-.social-media-container img {
+.social-media-container i {
     margin: 0 1rem 0 1rem;
+    font-size: clamp(17px,18px + .2vw, 20px);
+    color: var(--clr-dark-desat-cyan);
 }
-.social-media-container img:first-child {
+.social-media-container i:active{
+    color: var(--clr-white);
+}
+.social-media-container i:hover{
+    cursor: pointer;
+}
+.social-media-container i:first-child {
     margin-left: auto;
 }
-.social-media-container img:last-child {
+.social-media-container i:last-child {
     margin-right: auto;
 }
 .attribution {
@@ -483,6 +491,9 @@ footer {
     .footer-nav ul {
         max-width: 350px;
         margin: 2.5rem auto 0;
+    }
+    .footer-nav a:active{
+        color: var(--clr-white);
     }
     .social-media-container {
         margin-top: 4rem;

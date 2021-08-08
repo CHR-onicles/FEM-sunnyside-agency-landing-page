@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- custom css -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navbar + Banner -->
-  <header class="main-header">
+  <header class="main-header" id="home">
     <!-- navbar -->
     <nav class="navbar">
       <div class="navbar-content">
@@ -23,9 +26,9 @@
         <!-- End navbar header -->
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#" class="contact">Contact</a></li>
           </ul>
         </div>
@@ -43,7 +46,7 @@
   <!-- End Navbar + Banner -->
 
   <!-- about section -->
-  <section class="about">
+  <section class="about" id="about">
     <article class="about-transform">
       <div class="img-transform"></div>
       <div class="text-content">
@@ -70,7 +73,7 @@
   <!-- End about section -->
 
   <!-- services section -->
-  <section class="services">
+  <section class="services" id="services">
     <article>
       <div class="img-graphic-design"></div>
       <div class="text-content">
@@ -95,7 +98,7 @@
   <!-- End services section -->
 
   <!-- testimonials section -->
-  <section class="testimonials">
+  <section class="testimonials" id="testimonials">
     <h3>Client testimonials</h3>
     <div class="content">
       <article>
@@ -130,7 +133,7 @@
       <!-- End testimonials section -->
       
       <!-- gallery section -->
-      <section class="gallery">
+      <section class="gallery" id="projects">
         <div class="mobile-container">
           <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="image-gallery-milkbottles">
           <img src="./images/mobile/image-gallery-orange.jpg" alt="image-gallery-orange">
@@ -156,18 +159,18 @@
     <!-- footer nav -->
     <nav class="footer-nav">
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
       </ul>
     </nav>
     <!-- End footer nav -->
     <!-- social media -->
     <div class="social-media-container">
-      <img src="./images/icon-facebook.svg" alt="icon-facebook">
-      <img src="./images/icon-instagram.svg" alt="icon-instagram">
-      <img src="./images/icon-twitter.svg" alt="icon-twitter">
-      <img src="./images/icon-pinterest.svg" alt="icon-pinterest">
+      <i class="fab fa-facebook-square"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-pinterest"></i>
     </div>
     <!-- End social media -->
     <div class="attribution">
