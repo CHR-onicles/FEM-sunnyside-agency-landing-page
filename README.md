@@ -6,7 +6,7 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Demo](#Demo)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -23,10 +23,11 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
-
-<img src="" width=400 alt="Mobile view">
-<img src="" width=800 alt="Desktop view">
+### Demo
+<div style="display: flex">
+<img src="./demo/mobile.gif" width=375 alt="Mobile view">
+<img src="./demo/desktop.gif" width=800 height=500 alt="Desktop view" style="margin-top: auto">
+</div>
 
 
 
