@@ -41,11 +41,21 @@ html {
 body {
     font-family: var(--ff-primary);
     font-size: (var(--ff-size), var(--ff-size) + 1vw, var(--ff-size) + 4px);
+    overflow: overlay; /* Makes the scroll-track transparent */
 }
 h1,
 h2,
 h3 {
     font-family: var(--ff-secondary);
+}
+::-webkit-scrollbar {
+    position: absolute;
+    width: 6px;
+    right: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--clr-dark-desat-cyan);
+    border-radius: 20px;
 }
 .main-header {
     min-height: 100vh;
@@ -325,13 +335,13 @@ footer {
 }
 .social-media-container i {
     margin: 0 1rem 0 1rem;
-    font-size: clamp(17px,18px + .2vw, 20px);
+    font-size: clamp(17px, 18px + 0.2vw, 20px);
     color: var(--clr-dark-desat-cyan);
 }
-.social-media-container i:active{
+.social-media-container i:active {
     color: var(--clr-white);
 }
-.social-media-container i:hover{
+.social-media-container i:hover {
     cursor: pointer;
 }
 .social-media-container i:first-child {
@@ -401,7 +411,7 @@ footer {
         padding: 0.7em 1.2em;
         transition: var(--transition);
     }
-    li a.contact:active{
+    li a.contact:active {
         background: hsl(200, 100%, 72%);
         color: var(--clr-white);
     }
@@ -492,7 +502,7 @@ footer {
         max-width: 350px;
         margin: 2.5rem auto 0;
     }
-    .footer-nav a:active{
+    .footer-nav a:active {
         color: var(--clr-white);
     }
     .social-media-container {
