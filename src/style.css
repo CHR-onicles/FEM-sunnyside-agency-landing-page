@@ -180,6 +180,7 @@ section.about p {
     font-weight: 600;
     text-align: center;
     width: 85%;
+    max-width: 50ch;
     margin: 1rem auto 2rem;
 }
 section.about span {
@@ -246,6 +247,8 @@ section.services .text-content :is(.photography, .photography + p) {
 section.services .text-content p {
     font-size: clamp(14px, 14px + 0.5vw, 17px);
     line-height: 1.5em;
+    max-width: 50ch;
+    margin: 0 auto;
 }
 section.testimonials {
     margin-top: 5rem;
@@ -469,6 +472,9 @@ footer {
     section.services :is(.img-graphic-design, .img-photography) {
         height: max(60vw, 550px);
         background-position: center calc(30% + 2.5vw);
+    }
+    section.services .text-content p {
+        max-width: 50ch;
     }
     section.testimonials {
         margin-top: 7rem;
