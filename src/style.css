@@ -197,18 +197,18 @@ section.about span:hover {
 }
 section.services article {
     position: relative;
-    margin-bottom: -10.5%; /* to cover tiny whitespace in between articles */
+    margin-bottom: -10%; /*to cover tiny whitespace in between articles on small screens */
 }
-section.services :is(.img-graphic-design, .img-photography){
-    height: min(80vw + 380px, 600px);
+section.services :is(.img-graphic-design, .img-photography) {
+    height: min(80vw + 380px, 700px);
     width: 100%;
 }
-section.services .img-graphic-design{
-    background: url("./images/mobile/image-graphic-design.jpg") center /cover no-repeat;
+section.services .img-graphic-design {
+    background: url("./images/mobile/image-graphic-design.jpg") center / cover no-repeat;
     background-position: center calc(40% + 10vw);
 }
-section.services .img-photography{
-    background: url("./images/mobile/image-photography.jpg") center /cover no-repeat;
+section.services .img-photography {
+    background: url("./images/mobile/image-photography.jpg") center / cover no-repeat;
     background-position: center calc(40% + 10vw);
 }
 section.services .text-content {
@@ -235,7 +235,7 @@ section.services .text-content p {
     line-height: 1.5em;
 }
 section.testimonials {
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 section.testimonials article {
     margin-top: 4rem;
@@ -257,6 +257,7 @@ section.testimonials img {
 section.testimonials p {
     margin: 2rem auto 0;
     width: 90%;
+    max-width: 500px;
     text-align: center;
     color: var(--clr-dark-blue);
     line-height: 1.5em;
@@ -301,7 +302,7 @@ footer {
 .logo-wrapper .footer-logo {
     display: block;
     margin: 0 auto;
-    width: 50%;
+    width: 30%;
     max-width: 250px;
 }
 .footer-nav ul {
@@ -336,10 +337,13 @@ footer {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-@media screen and (min-width: 768px) {
-    section.services img {
-        max-height: 100vh;
-        object-position: center 20%;
+@media screen and (min-width: 568px) {
+    /* minimum width on small screens in landscape mode */
+    section.services article {
+        margin-bottom: 0;
+    }
+    section.services .text-content {
+        bottom: 7%;
     }
 }
 @media screen and (min-width: 800px) {
@@ -399,23 +403,37 @@ footer {
         display: grid;
         place-content: center;
     }
-    section.about .text-content :is(h2, p){
+    section.about .text-content :is(h2, p) {
         text-align: left;
         margin-left: 10vw;
         width: 70%;
     }
-    section.about .text-content h2{
+    section.about .text-content h2 {
         margin-top: 0;
     }
     section.about .text-content span {
         text-align: left;
         margin: 0 0 0 10vw;
     }
-    section.about .text-content span::before{
+    section.about .text-content span::before {
         left: -1%;
         transform: none;
     }
     .img-transform {
         order: 1;
+    }
+    .img-standout + .text-content span::before {
+        background: hsl(240, 100%, 50%);
+    }
+    section.services{
+        display: flex;
+        width: 100%;
+    }
+    section.services article{
+        flex: 1 100%;
+    }
+    section.services :is(.img-graphic-design, .img-photography) {
+        height: 550px; /*TODO: change later */
+        background-position: center center;
     }
 }
