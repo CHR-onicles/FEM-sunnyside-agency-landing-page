@@ -418,12 +418,20 @@ footer {
     section.about .text-content span::before {
         left: -1%;
         transform: none;
+        transition: var(--transition);
+        border-radius: 20px;
     }
     .img-transform {
         order: 1;
     }
+    .img-transform + .text-content span:active::before{
+        background:hsl(51, 100%, 49%);
+    }
     .img-standout + .text-content span::before {
-        background: hsl(240, 100%, 50%);
+        background: hsl(7, 80%, 89%);
+    }
+    .img-standout + .text-content span:active::before {
+        background: hsl(7, 100%, 71%);
     }
     section.services{
         display: flex;
@@ -433,7 +441,7 @@ footer {
         flex: 1 100%;
     }
     section.services :is(.img-graphic-design, .img-photography) {
-        height: 550px; /*TODO: change later */
-        background-position: center center;
+        height: max(60vw, 550px);
+        background-position: center calc(30% + 2.5vw);
     }
 }
