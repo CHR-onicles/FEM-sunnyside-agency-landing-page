@@ -58,7 +58,7 @@ h3 {
     border-radius: 20px;
 }
 .main-header {
-    min-height: 100vh;
+    height: max(100vh, 500px);
     background: url("./images/mobile/image-header.jpg") center / cover no-repeat;
 }
 /*================
