@@ -68,6 +68,9 @@ NAVBAR
     border: none;
     transition: var(--transition);
 }
+.nav-toggle:hover {
+    cursor: pointer;
+}
 .rotate-nav-toggle {
     transform: rotate(90deg);
 }
@@ -299,11 +302,11 @@ footer {
     padding-top: 3rem;
     width: 100%;
 }
-.logo-wrapper .footer-logo {
+.footer-logo {
     display: block;
     margin: 0 auto;
-    width: 30%;
-    max-width: 250px;
+    width: 25%;
+    max-width: 150px;
 }
 .footer-nav ul {
     list-style-type: none;
@@ -388,6 +391,11 @@ footer {
         color: var(--clr-v-dark-desat-blue);
         background: var(--clr-white);
         padding: 0.7em 1.2em;
+        transition: var(--transition);
+    }
+    li a.contact:active{
+        background: hsl(200, 100%, 72%);
+        color: var(--clr-white);
     }
     .nav-links-container::before {
         display: none;
@@ -424,8 +432,8 @@ footer {
     .img-transform {
         order: 1;
     }
-    .img-transform + .text-content span:active::before{
-        background:hsl(51, 100%, 49%);
+    .img-transform + .text-content span:active::before {
+        background: hsl(51, 100%, 49%);
     }
     .img-standout + .text-content span::before {
         background: hsl(7, 80%, 89%);
@@ -433,15 +441,50 @@ footer {
     .img-standout + .text-content span:active::before {
         background: hsl(7, 100%, 71%);
     }
-    section.services{
+    section.services {
         display: flex;
         width: 100%;
     }
-    section.services article{
+    section.services article {
         flex: 1 100%;
     }
     section.services :is(.img-graphic-design, .img-photography) {
         height: max(60vw, 550px);
         background-position: center calc(30% + 2.5vw);
+    }
+    section.testimonials {
+        margin-top: 7rem;
+    }
+    section.testimonials .content {
+        display: flex;
+        width: 80vw;
+        margin: 0 auto;
+    }
+    section.gallery .mobile-container {
+        display: none;
+    }
+    section.gallery .desktop-container {
+        display: flex;
+        margin-top: 7rem;
+        height: 40vw;
+        max-height: 500px;
+        width: 100%;
+    }
+    section.gallery .desktop-container img {
+        object-fit: cover;
+        object-position: center center;
+        height: 100%;
+        width: calc(100% / 4);
+    }
+    .footer-logo {
+        width: 20%;
+        max-width: 160px;
+    }
+    .footer-nav ul {
+        max-width: 350px;
+        margin: 2.5rem auto 0;
+    }
+    .social-media-container {
+        margin-top: 4rem;
     }
 }
