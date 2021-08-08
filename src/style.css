@@ -373,6 +373,18 @@ footer {
         bottom: 7%;
     }
 }
+@media screen and (min-width: 768px) {
+    /* desktop version of images look better on tablet view */
+    section.services .img-graphic-design {
+        background: url("./images/desktop/image-graphic-design.jpg") center / cover no-repeat;
+    }
+    section.services .img-photography {
+        background: url("./images/desktop/image-photography.jpg") center / cover no-repeat;
+    }
+    section.services :is(.img-graphic-design, .img-photography) {
+        height: min(80vw + 250px, 550px);
+    }
+}
 @media screen and (min-width: 800px) {
     .main-header {
         background: url("./images/desktop/image-header.jpg") center / cover no-repeat;
@@ -483,12 +495,7 @@ footer {
     section.services :is(.img-graphic-design, .img-photography) {
         height: max(50vw, 520px);
     }
-    section.services .img-graphic-design {
-        background: url("./images/desktop/image-graphic-design.jpg") center / cover no-repeat;
-    }
-    section.services .img-photography {
-        background: url("./images/desktop/image-photography.jpg") center / cover no-repeat;
-    }
+
     section.services .text-content {
         bottom: 13%;
     }
