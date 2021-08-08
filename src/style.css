@@ -209,6 +209,9 @@ section.about span::before {
 section.about span:hover {
     cursor: pointer;
 }
+.img-standout + .text-content span::before {
+    background: hsl(7, 80%, 89%);
+}
 section.services article {
     position: relative;
     margin-bottom: -10%; /*to cover tiny whitespace in between articles on small screens */
@@ -233,7 +236,7 @@ section.services .text-content {
     text-align: center;
 }
 section.services .text-content h3 {
-    font-size: clamp(1.4rem, 1.5rem + .5vw, 1.7rem);
+    font-size: clamp(1.4rem, 1.5rem + 0.5vw, 1.7rem);
     font-weight: 900;
     margin-bottom: 1.2rem;
     text-transform: capitalize;
@@ -428,13 +431,13 @@ footer {
     section.about :is(.img-transform, .img-standout, .text-content) {
         width: 50vw;
     }
-    section.about :is(.img-transform, .img-standout){
+    section.about :is(.img-transform, .img-standout) {
         min-height: 450px;
         height: calc(50vw + 50px);
         max-height: 500px;
     }
-    section.about .img-transform{
-        background: url("./images/desktop/image-transform.jpg") center /cover no-repeat;
+    section.about .img-transform {
+        background: url("./images/desktop/image-transform.jpg") center / cover no-repeat;
     }
     section.about .img-standout {
         background: url("./images/desktop/image-stand-out.jpg") center / cover no-repeat;
@@ -467,9 +470,6 @@ footer {
     .img-transform + .text-content span:active::before {
         background: hsl(51, 100%, 49%);
     }
-    .img-standout + .text-content span::before {
-        background: hsl(7, 80%, 89%);
-    }
     .img-standout + .text-content span:active::before {
         background: hsl(7, 100%, 71%);
     }
@@ -483,13 +483,13 @@ footer {
     section.services :is(.img-graphic-design, .img-photography) {
         height: max(50vw, 520px);
     }
-    section.services .img-graphic-design{
-        background: url("./images/desktop/image-graphic-design.jpg") center /cover no-repeat;
+    section.services .img-graphic-design {
+        background: url("./images/desktop/image-graphic-design.jpg") center / cover no-repeat;
     }
     section.services .img-photography {
         background: url("./images/desktop/image-photography.jpg") center / cover no-repeat;
     }
-    section.services .text-content{
+    section.services .text-content {
         bottom: 13%;
     }
     section.services .text-content p {
