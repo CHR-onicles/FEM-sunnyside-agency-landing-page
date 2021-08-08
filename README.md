@@ -24,10 +24,8 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Demo
-<div style="display: flex">
 <img src="./demo/mobile.gif" width=375 alt="Mobile view">
-<img src="./demo/desktop.gif" width=800 height=500 alt="Desktop view" style="margin-top: auto">
-</div>
+<img src="./demo/desktop.gif" width=800 height=500 alt="Desktop view">
 
 
 
