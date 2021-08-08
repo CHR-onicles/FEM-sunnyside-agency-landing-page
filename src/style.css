@@ -233,7 +233,7 @@ section.services .text-content {
     text-align: center;
 }
 section.services .text-content h3 {
-    font-size: clamp(1.5rem, 1.5rem + 1vw, 1.8rem);
+    font-size: clamp(1.4rem, 1.5rem + .5vw, 1.7rem);
     font-weight: 900;
     margin-bottom: 1.2rem;
     text-transform: capitalize;
@@ -273,7 +273,7 @@ section.testimonials img {
 section.testimonials p {
     margin: 2rem auto 0;
     width: 90%;
-    max-width: 45ch;
+    max-width: 40ch;
     text-align: center;
     color: var(--clr-dark-blue);
     line-height: 1.5em;
@@ -428,6 +428,17 @@ footer {
     section.about :is(.img-transform, .img-standout, .text-content) {
         width: 50vw;
     }
+    section.about :is(.img-transform, .img-standout){
+        min-height: 450px;
+        height: calc(50vw + 50px);
+        max-height: 500px;
+    }
+    section.about .img-transform{
+        background: url("./images/desktop/image-transform.jpg") center /cover no-repeat;
+    }
+    section.about .img-standout {
+        background: url("./images/desktop/image-stand-out.jpg") center / cover no-repeat;
+    }
     section.about .text-content {
         display: grid;
         place-content: center;
@@ -470,14 +481,25 @@ footer {
         flex: 1 100%;
     }
     section.services :is(.img-graphic-design, .img-photography) {
-        height: max(60vw, 550px);
-        background-position: center calc(30% + 2.5vw);
+        height: max(50vw, 520px);
+    }
+    section.services .img-graphic-design{
+        background: url("./images/desktop/image-graphic-design.jpg") center /cover no-repeat;
+    }
+    section.services .img-photography {
+        background: url("./images/desktop/image-photography.jpg") center / cover no-repeat;
+    }
+    section.services .text-content{
+        bottom: 13%;
     }
     section.services .text-content p {
-        max-width: 50ch;
+        max-width: 40ch; /* has to be a little smaller in order to get them both to line up correctly */
     }
     section.testimonials {
         margin-top: 7rem;
+    }
+    section.testimonials article {
+        flex-grow: 1;
     }
     section.testimonials .content {
         display: flex;
