@@ -358,7 +358,7 @@ footer {
 }
 .attribution {
     margin-top: 2rem;
-    font-size: clamp(12px, 12px + 1vw, 15px);
+    font-size: clamp(11px, 11px + .3vw, 12.5px);
     text-align: center;
 }
 .attribution a {
