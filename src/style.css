@@ -331,6 +331,7 @@ footer {
 .footer-nav a {
     text-decoration: none;
     color: var(--clr-dark-desat-cyan);
+    transition: var(--transition);
 }
 .social-media-container {
     display: flex;
@@ -341,12 +342,11 @@ footer {
     margin: 0 1rem 0 1rem;
     font-size: clamp(17px, 18px + 0.2vw, 20px);
     color: var(--clr-dark-desat-cyan);
-}
-.social-media-container i:active {
-    color: var(--clr-white);
+    transition: var(--transition);
 }
 .social-media-container i:hover {
     cursor: pointer;
+    color: var(--clr-white);
 }
 .social-media-container i:first-child {
     margin-left: auto;
@@ -427,7 +427,7 @@ footer {
         padding: 0.7em 1.2em;
         transition: var(--transition);
     }
-    li a.contact:active {
+    li a.contact:hover {
         background: hsl(200, 100%, 72%);
         color: var(--clr-white);
     }
@@ -477,10 +477,10 @@ footer {
     .img-transform {
         order: 1;
     }
-    .img-transform + .text-content span:active::before {
+    .img-transform + .text-content span:hover::before {
         background: hsl(51, 100%, 49%);
     }
-    .img-standout + .text-content span:active::before {
+    .img-standout + .text-content span:hover::before {
         background: hsl(7, 100%, 71%);
     }
     section.services {
@@ -535,7 +535,7 @@ footer {
         max-width: 350px;
         margin: 2.5rem auto 0;
     }
-    .footer-nav a:active {
+    .footer-nav a:hover {
         color: var(--clr-white);
     }
     .social-media-container {
