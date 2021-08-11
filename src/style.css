@@ -49,9 +49,7 @@ h3 {
     font-family: var(--ff-secondary);
 }
 ::-webkit-scrollbar {
-    position: absolute;
     width: 6px;
-    right: 5px;
 }
 ::-webkit-scrollbar-thumb {
     background: var(--clr-dark-desat-cyan);
