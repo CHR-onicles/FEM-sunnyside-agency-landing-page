@@ -49,10 +49,12 @@ h3 {
     font-family: var(--ff-secondary);
 }
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 15px;
 }
 ::-webkit-scrollbar-thumb {
     background: var(--clr-dark-desat-cyan);
+    background-clip: content-box;
+    border: 3px solid transparent;
     border-radius: 20px;
 }
 .main-header {
@@ -309,7 +311,6 @@ section.gallery .mobile-container img {
     width: 100%;
 }
 footer {
-    min-height: 40vh;
     background: hsl(167, 44%, 70%); /* actual footer color from design */
 }
 .logo-wrapper {
@@ -319,7 +320,7 @@ footer {
 .footer-logo {
     display: block;
     margin: 0 auto;
-    width: 25%;
+    width: 35vw;
     max-width: 150px;
 }
 .footer-nav ul {
@@ -356,7 +357,8 @@ footer {
 }
 .attribution {
     margin-top: 2rem;
-    font-size: clamp(11px, 11px + .3vw, 12.5px);
+    padding-bottom: 2rem;
+    font-size: clamp(11px, 11px + 0.3vw, 12.5px);
     text-align: center;
 }
 .attribution a {
@@ -386,6 +388,7 @@ footer {
 @media screen and (min-width: 800px) {
     .main-header {
         background: url("./images/desktop/image-header.jpg") center / cover no-repeat;
+        height: auto;
     }
     .nav-toggle {
         display: none;
@@ -436,7 +439,8 @@ footer {
     }
     section.about article {
         display: flex;
-        max-width: 100%;
+        margin: 0 auto;
+        max-width: var(--max-width);
     }
     section.about :is(.img-transform, .img-standout, .text-content) {
         width: 50vw;
@@ -485,15 +489,16 @@ footer {
     }
     section.services {
         display: flex;
-        width: 100%;
+        margin: 0 auto;
+        max-width: var(--max-width);
     }
     section.services article {
         flex: 1 100%;
     }
     section.services :is(.img-graphic-design, .img-photography) {
         height: max(50vw, 520px);
+        max-height: 700px;
     }
-
     section.services .text-content {
         bottom: 13%;
     }
@@ -501,25 +506,23 @@ footer {
         max-width: 40ch; /* has to be a little smaller in order to get them both to line up correctly */
     }
     section.testimonials {
-        margin-top: 7rem;
-    }
-    section.testimonials article {
-        flex-grow: 1;
+        margin: 7rem auto 0 auto;
+        max-width: var(--max-width);
     }
     section.testimonials .content {
         display: flex;
-        width: 80vw;
-        margin: 0 auto;
+        width: 100%;
+        justify-content: space-between;
     }
     section.gallery .mobile-container {
         display: none;
     }
     section.gallery .desktop-container {
         display: flex;
-        margin-top: 7rem;
+        margin: 7rem auto 0 auto;
         height: 40vw;
         max-height: 500px;
-        width: 100%;
+        max-width: var(--max-width);
     }
     section.gallery .desktop-container img {
         object-fit: cover;
