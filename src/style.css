@@ -443,7 +443,7 @@ footer {
         max-width: var(--max-width);
     }
     section.about :is(.img-transform, .img-standout, .text-content) {
-        width: 50vw;
+        width: 50%;
     }
     section.about :is(.img-transform, .img-standout) {
         min-height: 450px;
@@ -457,12 +457,14 @@ footer {
         background: url("./images/desktop/image-stand-out.jpg") center / cover no-repeat;
     }
     section.about .text-content {
-        display: grid;
-        place-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
     }
     section.about .text-content :is(h2, p) {
         text-align: left;
-        margin-left: 10vw;
+        margin-left: min(10vw, 10rem);
         width: 70%;
     }
     section.about .text-content h2 {
@@ -470,7 +472,7 @@ footer {
     }
     section.about .text-content span {
         text-align: left;
-        margin: 0 0 0 10vw;
+        margin: 0 0 0 min(10vw, 10rem);
     }
     section.about .text-content span::before {
         left: -1%;
