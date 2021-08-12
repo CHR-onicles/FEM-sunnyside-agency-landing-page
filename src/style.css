@@ -26,7 +26,8 @@ GLOBAL VARIABLES
     --clr-white: hsl(0, 0%, 100%);
 
     --transition: all 0.3s;
-    --max-width: 1440px;
+    /* --max-width: 1440px; */
+    --max-width: 1600px;
 }
 *,
 *::before,
