@@ -365,7 +365,7 @@ footer {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-@media screen and (min-width: 568px) {
+@media screen and (min-width: 35.5em) {
     /* minimum width on small screens in landscape mode */
     section.services article {
         margin-bottom: 0;
@@ -374,7 +374,7 @@ footer {
         bottom: 7%;
     }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
     /* desktop version of images look better on tablet view */
     section.services .img-graphic-design {
         background: url("./images/desktop/image-graphic-design.jpg") center / cover no-repeat;
@@ -386,7 +386,7 @@ footer {
         height: min(80vw + 250px, 550px);
     }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 50em) {
     .main-header {
         background: url("./images/desktop/image-header.jpg") center / cover no-repeat;
         height: auto;
